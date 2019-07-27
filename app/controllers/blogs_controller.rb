@@ -1,8 +1,5 @@
 class BlogsController < ApplicationController
 
-  def show
-  	@blog = Blog.find(params[:id])
-  end
 
   def index
   	#記事を全取得
@@ -19,7 +16,12 @@ class BlogsController < ApplicationController
   	redirect_to blogs_path
   end
 
+  def show
+  	@blog = Blog.find(params[:id])
+  end
+
   def edit
+  	@blog = Blog.find(params[:id])
   end
 
   private
