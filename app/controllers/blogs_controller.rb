@@ -3,6 +3,8 @@ class BlogsController < ApplicationController
   end
 
   def index
+  	#記事を全取得
+  	@blogs = Blog.all
   end
 
   def new
